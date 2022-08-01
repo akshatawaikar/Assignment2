@@ -11,8 +11,8 @@ namespace Assignment2_Q3
         public struct Time
         {
             /*public int i;*/
-            public int minutes;
-            public int hours;
+            private int minutes;
+            private int hours;
 
 
             public Time(int hh, int mm)
@@ -49,22 +49,24 @@ namespace Assignment2_Q3
 
 
             public void display()
-            {
+            {              
                 Console.WriteLine("{0}:{1}", hours,minutes);
             }
         }
         static void Main(string[] args)
         {
-            Time t1 = new Time(30,20);
-            Time t2 = new Time(40,60);
+            Time t1 = new Time(12,20);
+            Time t2 = new Time(11,15);
             
 
             Time t3 = t1 + t2;
 
-            Time t4 = t2 - t1;
+            Time t4 = t1 - t2;
+            
+           
 
-            (t1 + new Time(50,8)).display();
-            (t2 - new Time(10,7)).display();
+            (t1 + new Time(03,8)).display();
+            (t1 - new Time(04,7)).display();
 
             t3.display();
             t4.display();
