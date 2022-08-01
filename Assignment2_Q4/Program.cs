@@ -11,10 +11,9 @@ namespace Assignment2_Q4
 
         public struct Time
         {
-            private readonly int minutes;
-            private readonly int hours;
-            // public int i;
-
+            public int minutes;
+            public int hours;
+           
             public Time(int hh, int mm)
             {
                 this.minutes = mm;
@@ -26,19 +25,21 @@ namespace Assignment2_Q4
                 return t;
             }
 
-            public static explicit operator Time(int i)
+            public static explicit operator int(Time t)
             {
-
+               
+                int i = (int)t.minutes;
+                return i ;
             }
-            public void print()
-            {
-                Console.WriteLine("{0}", );
-            }
-
+          
         }
         static void Main(string[] args)
         {
-
+            Time t1 = new Time(9, 30);
+            Time t2 = 100;
+            Console.WriteLine("T2 : {0}", t2.minutes);
+            int i = (int)t1;
+            Console.WriteLine(i);
         }
     }
 }

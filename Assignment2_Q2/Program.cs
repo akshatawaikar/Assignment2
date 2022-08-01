@@ -12,19 +12,24 @@ namespace Assignment2
         {
             private readonly int minutes;
             private readonly int hours;
+            private readonly int totalminutes;
 
-            
-            public Time(int hh, int mm)
-            {
-                this.minutes = mm;
-                this.hours = hh;
-                
-            }
+
             public int HOUR { get { return hours; } }
             public int MIN { get { return minutes; } }
+            public Time(int hh, int mm)
+            {
+                this.hours = hh;
+                this.minutes = mm;
+                this.totalminutes = hh * 60 + mm;
+            }
+            
             public override string ToString()
             {
-                return String.Format("{0}:{1}",hours,minutes);
+                int mins = totalminutes % 60;
+                int hrs = totalminutes / 60;
+                
+                return String.Format("{0}:{1}",hrs,mins);
             }
         }
         static void Main(string[] args)

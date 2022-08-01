@@ -55,8 +55,8 @@ namespace Assignment2_Q3
         }
         static void Main(string[] args)
         {
-            Time t1 = new Time(12,20);
-            Time t2 = new Time(11,15);
+            Time t1 = new Time(4,30);
+            Time t2 = new Time(1,15);
             
 
             Time t3 = t1 + t2;
@@ -65,8 +65,8 @@ namespace Assignment2_Q3
             
            
 
-            (t1 + new Time(03,8)).display();
-            (t1 - new Time(04,7)).display();
+            (t1 + new Time(03,08)).display();
+            (t1 - new Time(04,07)).display();
 
             t3.display();
             t4.display();

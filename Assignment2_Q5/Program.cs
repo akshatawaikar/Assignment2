@@ -8,7 +8,7 @@ namespace Assignment2_Q5
 {
     internal class Program
     {
-        public  class Time {
+        public  struct Time {
             public int minutes;
             private readonly int hours;
 
@@ -19,8 +19,9 @@ namespace Assignment2_Q5
 
             }
 
-
+            static Time t;
         }
+
         static void Main(string[] args)
         {
             Time t1 = new Time(9, 30); 
